@@ -1,9 +1,9 @@
 name: Create or Update Draft Release
 
 on:
-  push:
-    branches:
-    - main
+  # push:
+  #   branches:
+  #   - main
   repository_dispatch:
     types: [ version-bump ]
   workflow_dispatch:
@@ -99,12 +99,12 @@ jobs:
       uses: paketo-buildpacks/github-config/actions/release/notes@main
       with:
         repo: ${{ github.repository }}
-        token: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
     - name: Create Release
       uses: paketo-buildpacks/github-config/actions/release/create@main
       with:
         repo: ${{ github.repository }}
-        token: ${{ secrets.PAKETO_BOT_GITHUB_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
         tag_name: v${{ steps.tag.outputs.tag }}
         target_commitish: ${{ github.sha }}
         name: v${{ steps.tag.outputs.tag }}
