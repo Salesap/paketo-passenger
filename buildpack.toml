@@ -27,7 +27,7 @@ api = "0.7"
     purl = "pkg:generic/curl@7.87.0?checksum=8a063d664d1c23d35526b87a2bf15514962ffdd8ef7fd40519191b3c23e39548&download_url=https://curl.se/download/curl-7.87.0.tar.gz"
     source = "https://curl.se/download/curl-7.87.0.tar.gz"
     source-checksum = "sha256:8a063d664d1c23d35526b87a2bf15514962ffdd8ef7fd40519191b3c23e39548"
-    stacks = ["io.buildpacks.stacks.jammy"]
+    stacks = ["io.buildpacks.stacks.jammy", "*"]
     uri = "https://artifacts.paketo.io/curl/curl_7.87.0_linux_jammy_51be8679.tgz"
     version = "7.87.0"
 
@@ -40,7 +40,7 @@ api = "0.7"
     purl = "pkg:generic/curl@7.87.0?checksum=8a063d664d1c23d35526b87a2bf15514962ffdd8ef7fd40519191b3c23e39548&download_url=https://curl.se/download/curl-7.87.0.tar.gz"
     source = "https://curl.se/download/curl-7.87.0.tar.gz"
     source-checksum = "sha256:8a063d664d1c23d35526b87a2bf15514962ffdd8ef7fd40519191b3c23e39548"
-    stacks = ["io.buildpacks.stacks.bionic"]
+    stacks = ["io.buildpacks.stacks.bionic", "*"]
     uri = "https://artifacts.paketo.io/curl/curl_7.87.0_linux_bionic_24317a40.tgz"
     version = "7.87.0"
 
